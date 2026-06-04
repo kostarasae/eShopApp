@@ -8,7 +8,7 @@ export interface ICart {
   items: ICartItem[];
 }
 
-export interface AddToCartDTO {
+export interface AddToCartDto {
   productId: string;
   quantity: number;
 }

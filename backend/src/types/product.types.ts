@@ -10,7 +10,7 @@ export interface IProduct {
     updatedAt?: Date
 }
 
-export interface CreateProductDTO {
+export interface CreateProductDto {
     name: string,
     description?: string,
     price: number,
@@ -19,7 +19,7 @@ export interface CreateProductDTO {
     imageUrl?: string
 }
 
-export interface UpdateProductDTO {
+export interface UpdateProductDto {
     name?: string,
     description?: string,
     price?: number,

@@ -12,21 +12,20 @@ export interface IUser {
     createdAt?: Date
 }
 
-export interface RegisterUserDTO {
+export interface RegisterUserDto {
     name: string,
     email: string,
     password: string,
     role?: UserRole
 }
 
-export interface LoginUserDTO {
+export interface LoginUserDto {
     email: string,
     password: string
 }
 
-export interface AuthResponseDTO {
-    token: string,
-    user: IUser
+export interface AuthResponseDto {
+    token: string
 }
 
 export interface JwtPayload {
