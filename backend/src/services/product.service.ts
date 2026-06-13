@@ -1,10 +1,10 @@
 import { productRepository } from '../repositories/product.repository';
-import { CreateProductDto, UpdateProductDto } from '../types/product.types';
+import { CreateProductDto, ProductFilters, UpdateProductDto } from '../../../shared/types/product.types';
 import { ProductDocument } from '../models/Product';
 
 export const productService = {
-    async getAll(): Promise<ProductDocument[]> {
-        return productRepository.findAll();
+    async getAll(filters: ProductFilters): Promise<{ products: ProductDocument[]; total: number }> {
+        return productRepository.findAll(filters);
     },
     async getById(id: string): Promise<ProductDocument> {
         const result = await productRepository.findById(id);

@@ -1,4 +1,4 @@
-import { IProduct } from "../types/product.types";
+import { IProduct } from "../../../shared/types/product.types";
 import { Document, Schema, model } from "mongoose";
 
 export interface ProductDocument extends Omit<IProduct, '_id'>, Document {}

@@ -1,6 +1,6 @@
-import { IUser, UserRole } from '../types/user.types';
+import { IUser, UserRole } from '../../../shared/types/user.types';
 import { Document, Schema, model } from 'mongoose';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 export interface UserDocument extends Omit<IUser, '_id'>, Document {
     comparePassword(candidatePassword: string): Promise<boolean>;

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { JwtPayload } from '../types/user.types';
+import { JwtPayload } from '../../../shared/types/user.types';
 import { config } from '../config/env';
 
 export function authMiddleware(req: Request, res: Response, next: NextFunction): void {

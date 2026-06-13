@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prebuild": "npm run clean",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/backend/src/server.js",
     "lint": "tsc --noEmit"
   },
   "keywords": [],
@@ -15,21 +17,26 @@
   "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.3",
+    "bootstrap": "^5.3.8",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.5.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/bcrypt": "^6.0.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/morgan": "^1.9.10",
     "@types/node": "^25.6.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "nodemon": "^3.1.14",
     "ts-node-dev": "^2.0.0",
     "typescript": "^6.0.3"

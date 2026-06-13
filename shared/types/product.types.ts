@@ -27,3 +27,12 @@ export interface UpdateProductDto {
     stock?: number,
     imageUrl?: string
 }
+
+export interface ProductFilters {
+    page?: number,
+    limit?: number,
+    category?: string,
+    minPrice?: number,
+    maxPrice?: number,
+    sort?: string
+}
